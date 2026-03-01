@@ -1,5 +1,7 @@
 import React, { createContext, useState, useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { AUTHENTICATION_TOKEN } from '../helpers/constants/StaticKeys';
+import AppStorage from '../helpers/Storage';
 
 const AuthContext = createContext(null);
 
@@ -9,27 +11,29 @@ export const AuthProvider = ({ children }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    // Restore user session from localStorage
     const savedUser = localStorage.getItem('admin_user');
-    if (savedUser) {
+    const savedToken = AppStorage.getItem(AUTHENTICATION_TOKEN);
+    if (savedUser && savedToken) {
       setUser(JSON.parse(savedUser));
+    } else {
+      // If either is missing, clean up both
+      localStorage.removeItem('admin_user');
+      AppStorage.removeItem(AUTHENTICATION_TOKEN);
     }
     setLoading(false);
   }, []);
 
-  const login = (email, password) => {
-    // Mock authentication
-    if (email === 'admin@dash.com' && password === 'admin123') {
-      const userData = { email, name: 'Main Admin', role: 'SuperAdmin' };
-      setUser(userData);
-      localStorage.setItem('admin_user', JSON.stringify(userData));
-      return { success: true };
-    }
-    return { success: false, message: 'Invalid email or password' };
+  const login = (userData, token) => {
+    setUser(userData);
+    localStorage.setItem('admin_user', JSON.stringify(userData));
+    AppStorage.setItem(AUTHENTICATION_TOKEN, token);
   };
 
   const logout = () => {
     setUser(null);
     localStorage.removeItem('admin_user');
+    AppStorage.removeItem(AUTHENTICATION_TOKEN);
     navigate('/login');
   };
 

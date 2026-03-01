@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { ConfigProvider, theme } from 'antd';
+import { ConfigProvider, theme, App as AntdApp } from 'antd';
 import { AuthProvider } from './context/AuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
 import DashboardLayout from './layouts/DashboardLayout';
-import LoginPage from './pages/LoginPage';
-import ProductsPage from './pages/ProductsPage';
+import LoginPage from './pages/Login/LoginPage';
+import ProductsPage from './pages/Products/ProductsPage';
 
 // Ant Design Light Theme Configuration
 const lightTheme = {
@@ -35,28 +35,30 @@ function App() {
   return (
     <Router>
       <ConfigProvider theme={lightTheme}>
-        <AuthProvider>
-          <Routes>
-            {/* Public Routes */}
-            <Route path="/login" element={<LoginPage />} />
+        <AntdApp style={{ height: '100%' }}>
+          <AuthProvider>
+            <Routes>
+              {/* Public Routes */}
+              <Route path="/login" element={<LoginPage />} />
 
-            {/* Protected Routes */}
-            <Route
-              path="/"
-              element={
-                <ProtectedRoute>
-                  <DashboardLayout />
-                </ProtectedRoute>
-              }
-            >
-              <Route index element={<ProductsPage />} />
+              {/* Protected Routes */}
+              <Route
+                path="/"
+                element={
+                  <ProtectedRoute>
+                    <DashboardLayout />
+                  </ProtectedRoute>
+                }
+              >
+                <Route index element={<ProductsPage />} />
+                <Route path="*" element={<Navigate to="/" replace />} />
+              </Route>
+
+              {/* Fallback */}
               <Route path="*" element={<Navigate to="/" replace />} />
-            </Route>
-
-            {/* Fallback */}
-            <Route path="*" element={<Navigate to="/" replace />} />
-          </Routes>
-        </AuthProvider>
+            </Routes>
+          </AuthProvider>
+        </AntdApp>
       </ConfigProvider>
     </Router>
   );

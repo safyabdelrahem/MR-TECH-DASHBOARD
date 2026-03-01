@@ -26,6 +26,7 @@ const DashboardLayout = () => {
 
     const changeLanguage = (lng) => {
         i18n.changeLanguage(lng);
+        document.documentElement.dir = lng === 'ar' ? 'rtl' : 'ltr';
     };
 
     const menuItems = [
@@ -33,13 +34,6 @@ const DashboardLayout = () => {
             key: '/',
             icon: <ShoppingOutlined />,
             label: t('sidebar.inventory'),
-        },
-        {
-            key: 'logout',
-            icon: <LogoutOutlined />,
-            label: t('sidebar.logout'),
-            danger: true,
-            onClick: logout,
         },
     ];
 
@@ -76,7 +70,7 @@ const DashboardLayout = () => {
                 }}
             >
                 <div style={{
-                    height: 160,
+                    height: 200,
                     padding: '24px',
                     display: 'flex',
                     flexDirection: 'column',
@@ -86,16 +80,27 @@ const DashboardLayout = () => {
                     borderBottom: '1px solid rgba(255,255,255,0.05)',
                     marginBottom: '10px'
                 }}>
-                    <img
-                        src={logo}
-                        alt="Logo"
-                        style={{
-                            height: collapsed ? 45 : 100,
-                            width: collapsed ? 45 : 100,
-                            objectFit: 'contain',
-                            transition: 'all 0.3s'
-                        }}
-                    />
+                    <div style={{
+                        background: '#ffffff',
+                        borderRadius: collapsed ? '12px' : '20px',
+                        padding: collapsed ? '6px' : '16px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        boxShadow: '0 8px 20px rgba(0,0,0,0.3)',
+                        transition: 'all 0.3s'
+                    }}>
+                        <img
+                            src={logo}
+                            alt="Logo"
+                            style={{
+                                height: collapsed ? 35 : 100,
+                                width: collapsed ? 35 : 100,
+                                objectFit: 'contain',
+                                mixBlendMode: 'multiply'
+                            }}
+                        />
+                    </div>
                     {!collapsed && (
                         <span style={{
                             color: '#fff',
@@ -144,14 +149,14 @@ const DashboardLayout = () => {
                             style={{ width: 120 }}
                             onChange={changeLanguage}
                             suffixIcon={<GlobalOutlined style={{ color: 'var(--primary-gold)' }} />}
-                            bordered={false}
+                            variant="borderless"
                             className="lang-select"
                         >
                             <Select.Option value="en">English</Select.Option>
-                            <Select.Option value="nl">Dutch (NL)</Select.Option>
+                            <Select.Option value="ar">العربية (AR)</Select.Option>
                         </Select>
 
-                        <Divider type="vertical" style={{ height: 20 }} />
+                        <Divider type="vertical" />
 
                         <Dropdown menu={{ items: userMenuItems }} trigger={['click']} placement="bottomRight">
                             <Space style={{ cursor: 'pointer' }}>
