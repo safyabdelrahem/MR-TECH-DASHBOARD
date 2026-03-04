@@ -184,6 +184,7 @@ const ProductsPage = () => {
                         current: state.pagination.current,
                         pageSize: state.pagination.pageSize,
                         total: state.pagination.total,
+                        onChange: (page, pageSize) => handleTableChange({ current: page, pageSize }),
                     }}
                     onChange={handleTableChange}
                     loading={state.loading}

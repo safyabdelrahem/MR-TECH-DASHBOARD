@@ -34,8 +34,9 @@ export const useProductsLogic = (form, t) => {
         getProducts(
             payload,
             (response) => {
-                const raw = response.data?.response || response.data?.data || [];
-                const rawProducts = Array.isArray(raw) ? raw : [raw];
+                const responseData = response.data?.response || {};
+                const rawProducts = responseData.data || [];
+                const meta = responseData.meta || {};
 
                 const products = rawProducts.map(product => ({
                     id: product.id,
@@ -52,7 +53,11 @@ export const useProductsLogic = (form, t) => {
 
                 updateState({
                     products,
-                    pagination: { current: page, pageSize, total: products.length },
+                    pagination: {
+                        current: meta.page || page,
+                        pageSize: meta.pageSize || pageSize,
+                        total: meta.total || products.length
+                    },
                 });
             },
             (errorResponse) => {
