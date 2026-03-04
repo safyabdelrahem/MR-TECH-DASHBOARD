@@ -75,21 +75,17 @@ const LoginPage = () => {
                 }}>
                     <div className="animate-fade-in-up">
                         <div style={{
-                            background: '#ffffff',
-                            borderRadius: '24px',
-                            padding: '16px 24px',
+                            background: 'transparent',
                             display: 'inline-flex',
                             alignItems: 'center',
-                            justifyContent: 'center',
-                            boxShadow: '0 8px 30px rgba(0,0,0,0.5)'
+                            justifyContent: 'center'
                         }}>
                             <img
                                 src={logo}
                                 alt="MR-TECH"
                                 style={{
                                     width: '120px',
-                                    objectFit: 'contain',
-                                    mixBlendMode: 'multiply'
+                                    objectFit: 'contain'
                                 }}
                             />
                         </div>

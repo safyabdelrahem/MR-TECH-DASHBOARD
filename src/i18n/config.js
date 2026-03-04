@@ -70,70 +70,70 @@ const resources = {
             }
         }
     },
-    ar: {
+    nl: {
         translation: {
             login: {
-                title: "بوابة الإدارة",
-                subtitle: "تسجيل الدخول الآمن للوحة التحكم",
-                email_label: "البريد الإلكتروني",
-                password_label: "كلمة المرور",
-                submit: "تسجيل الدخول",
-                success: "مرحباً بك مجدداً!",
-                footer: "إم آر تك للحلول الأمنية",
+                title: "Admin Portaal",
+                subtitle: "Beveiligde toegang tot uw dashboard",
+                email_label: "E-MAILADRES",
+                password_label: "WACHTWOORD",
+                submit: "INLOGGEN",
+                success: "Welkom terug!",
+                footer: "MR-TECH SECURITY OPLOSSINGEN",
                 email_placeholder: "admin@dash.com",
                 password_placeholder: "••••••••",
-                required_email: "يرجى إدخال البريد الإلكتروني!",
-                required_password: "يرجى إدخال كلمة المرور!"
+                required_email: "Voer uw e-mailadres in!",
+                required_password: "Voer uw wachtwoord in!"
             },
             sidebar: {
-                inventory: "إدارة المخزون",
-                logout: "تسجيل الخروج",
-                brand: "إم-آر تك"
+                inventory: "Voorraadbeheer",
+                logout: "Uitloggen",
+                brand: "MR-TECH"
             },
             header: {
-                sign_out: "تسجيل الخروج",
-                language: "اللغة"
+                sign_out: "Afmelden",
+                language: "Taal"
             },
             products: {
-                title: "إدارة المخزون",
-                subtitle: "إدارة كتالوج المنتجات الأمنية ومستويات المخزون",
-                new_product: "منتج جديد",
-                export: "تصدير القائمة",
-                search_placeholder: "ابحث باسم المنتج...",
-                filters: "مزيد من الفلاتر",
+                title: "Voorraadbeheer",
+                subtitle: "Beheer beveiligingscatalogus en voorraadniveaus",
+                new_product: "NIEUW PRODUCT",
+                export: "Lijst exporteren",
+                search_placeholder: "Zoek op productnaam of SKU...",
+                filters: "Meer filters",
                 table: {
-                    asset: "صورة المنتج",
-                    details: "التفاصيل",
-                    price: "سعر الوحدة",
-                    inventory: "المخزون",
-                    status: "الحالة",
-                    operations: "الإجراءات",
-                    no_description: "لا يوجد وصف",
-                    units: "قطعة"
+                    asset: "PRODUCT ASSET",
+                    details: "PRODUCT DETAILS",
+                    price: "UNIT PRIJS",
+                    inventory: "VOORRAAD",
+                    status: "STATUS",
+                    operations: "OPERATIES",
+                    no_description: "Geen beschrijving",
+                    units: "Eenheden"
                 },
                 modal: {
-                    add: "إضافة منتج جديد",
-                    edit: "تعديل بيانات المنتج",
-                    name: "اسم المنتج",
-                    name_placeholder: "مثل: كاميرا مراقبة ليلية",
-                    description: "الوصف",
-                    description_placeholder: "اكتب وصفاً للمنتج...",
-                    category: "التصنيف",
-                    price: "السعر",
-                    stock: "الكمية المتوفرة",
-                    images: "صور المنتج",
-                    select_images: "اختر الصور",
-                    cancel: "إلغاء",
-                    save: "حفظ التعديلات",
-                    create: "إضافة المنتج",
-                    required: "هذا الحقل مطلوب"
+                    add: "NIEUW RECORD AANMAKEN",
+                    edit: "PRODUCTRECORD BEWERKEN",
+                    name: "PRODUCTNAAM",
+                    name_placeholder: "bijv. Laser Bewegingssensor",
+                    description: "BESCHRIJVING",
+                    description_placeholder: "Productbeschrijving...",
+                    category: "CATEGORIE",
+                    price: "PRIJS ($)",
+                    stock: "VOORRAADNIVEAU",
+                    images: "PRODUCTAFBEELDINGEN",
+                    select_images: "Selecteer afbeeldingen",
+                    cancel: "ANNULEREN",
+                    save: "WIJZIGINGEN OPSLAAN",
+                    create: "PRODUCT TOEVOEGEN",
+                    required: "Verplicht veld"
                 },
                 messages: {
-                    deleted: "تم مسح المنتج بنجاح",
-                    updated: "تم تحديث البيانات بنجاح",
-                    added: "تمت إضافة المنتج بنجاح",
-                    fetch_failed: "فشل في جلب المنتجات من السيرفر",
-                    save_failed: "فشل في حفظ المنتج"
+                    deleted: "Product succesvol verwijderd",
+                    updated: "Record succesvol bijgewerkt",
+                    added: "Nieuw product succesvol toegevoegd",
+                    fetch_failed: "Laden van producten van backend mislukt",
+                    save_failed: "Opslaan van product mislukt"
                 }
             }
         }

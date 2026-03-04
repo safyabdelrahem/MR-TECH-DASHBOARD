@@ -35,8 +35,10 @@ const responseHandler = (response) => {
 
 const errorHandler = (error) => {
     if (error.response && error.response.status === 401) {
-        localStorage.clear();
-        window.location = "/login";
+        if (window.location.pathname !== "/login") {
+            localStorage.clear();
+            window.location = "/login";
+        }
     }
     return Promise.reject(error);
 };

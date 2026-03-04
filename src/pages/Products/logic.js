@@ -8,7 +8,7 @@ export const INITIAL_STATE = {
     searchText: '',
     isModalVisible: false,
     editingProduct: null,
-    pagination: { current: 1, pageSize: 6, total: 0 }
+    pagination: { current: 1, pageSize: 30, total: 0 }
 };
 
 export const useProductsLogic = (form, t) => {
@@ -21,7 +21,7 @@ export const useProductsLogic = (form, t) => {
 
     const isFetching = useRef(false);
 
-    const fetchProducts = (page = 1, pageSize = 6, filters = []) => {
+    const fetchProducts = (page = 1, pageSize = 30, filters = []) => {
         if (isFetching.current) return;
         isFetching.current = true;
         updateState({ loading: true });

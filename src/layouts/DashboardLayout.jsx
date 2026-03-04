@@ -81,13 +81,11 @@ const DashboardLayout = () => {
                     marginBottom: '10px'
                 }}>
                     <div style={{
-                        background: '#ffffff',
-                        borderRadius: collapsed ? '12px' : '20px',
+                        background: 'transparent',
                         padding: collapsed ? '6px' : '16px',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        boxShadow: '0 8px 20px rgba(0,0,0,0.3)',
                         transition: 'all 0.3s'
                     }}>
                         <img
@@ -96,8 +94,7 @@ const DashboardLayout = () => {
                             style={{
                                 height: collapsed ? 35 : 100,
                                 width: collapsed ? 35 : 100,
-                                objectFit: 'contain',
-                                mixBlendMode: 'multiply'
+                                objectFit: 'contain'
                             }}
                         />
                     </div>
@@ -146,14 +143,14 @@ const DashboardLayout = () => {
                         {/* Language Switcher */}
                         <Select
                             defaultValue={i18n.language}
-                            style={{ width: 120 }}
+                            style={{ width: 140 }}
                             onChange={changeLanguage}
                             suffixIcon={<GlobalOutlined style={{ color: 'var(--primary-gold)' }} />}
                             variant="borderless"
                             className="lang-select"
                         >
-                            <Select.Option value="en">English</Select.Option>
-                            <Select.Option value="ar">العربية (AR)</Select.Option>
+                            <Select.Option value="en">English (UK)</Select.Option>
+                            <Select.Option value="nl">Nederlands (NL)</Select.Option>
                         </Select>
 
                         <Divider type="vertical" />
