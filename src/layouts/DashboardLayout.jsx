@@ -7,7 +7,9 @@ import {
     MenuFoldOutlined,
     MenuUnfoldOutlined,
     DownOutlined,
-    GlobalOutlined
+    GlobalOutlined,
+    FileTextOutlined,
+    StarOutlined
 } from '@ant-design/icons';
 import { useNavigate, useLocation, Outlet } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
@@ -34,6 +36,16 @@ const DashboardLayout = () => {
             key: '/',
             icon: <ShoppingOutlined />,
             label: t('sidebar.inventory'),
+        },
+        {
+            key: '/orders',
+            icon: <FileTextOutlined />,
+            label: t('sidebar.orders'),
+        },
+        {
+            key: '/reviews',
+            icon: <StarOutlined />,
+            label: t('sidebar.reviews'),
         },
     ];
 

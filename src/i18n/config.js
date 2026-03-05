@@ -19,6 +19,8 @@ const resources = {
             },
             sidebar: {
                 inventory: "Inventory Control",
+                orders: "Order Management",
+                reviews: "Customer Reviews",
                 logout: "Logout",
                 brand: "MR-TECH"
             },
@@ -67,6 +69,82 @@ const resources = {
                     fetch_failed: "Failed to fetch products from backend",
                     save_failed: "Failed to save product"
                 }
+            },
+            orders: {
+                title: "Order Management",
+                subtitle: "Track and update customer orders",
+                search_placeholder: "Search by Order ID...",
+                filters: {
+                    status: "Status",
+                    customer_name: "Customer Name",
+                    product_name: "Product Name"
+                },
+                table: {
+                    id: "ORDER ID",
+                    customer: "CUSTOMER",
+                    total: "TOTAL AMOUNT",
+                    status: "STATUS",
+                    date: "DATE",
+                    operations: "OPERATIONS",
+                    unknown_customer: "Unknown Customer"
+                },
+                modal: {
+                    update_status: "UPDATE ORDER STATUS",
+                    status: "ORDER STATUS",
+                    cancel: "CANCEL",
+                    save: "UPDATE STATUS",
+                    required: "Please select a status",
+                    edit_status: "Edit Status"
+                },
+                status: {
+                    pending: "Pending",
+                    processing: "Processing",
+                    shipped: "Shipped",
+                    delivered: "Delivered",
+                    cancelled: "Cancelled"
+                },
+                messages: {
+                    fetch_failed: "Failed to fetch orders",
+                    updated: "Order status updated successfully",
+                    save_failed: "Failed to update order status"
+                }
+            },
+            reviews: {
+                title: "Customer Reviews",
+                subtitle: "Moderate product reviews and feedback",
+                search_placeholder: "Review content...",
+                filters: {
+                    status: "Status",
+                    customer_name: "Customer Name",
+                    product_name: "Product Name"
+                },
+                table: {
+                    product: "PRODUCT",
+                    customer: "CUSTOMER",
+                    rating: "RATING",
+                    comment: "COMMENT",
+                    status: "STATUS",
+                    date: "DATE",
+                    operations: "OPERATIONS",
+                    unknown_product: "Unknown Product"
+                },
+                modal: {
+                    update_status: "MODERATE REVIEW",
+                    status: "SET STATUS",
+                    cancel: "CANCEL",
+                    save: "SAVE CHANGES",
+                    required: "Please select a status"
+                },
+                status: {
+                    pending: "Pending",
+                    approved: "Approved",
+                    rejected: "Rejected"
+                },
+                messages: {
+                    fetch_failed: "Failed to fetch reviews",
+                    updated: "Review status updated successfully",
+                    save_failed: "Failed to update review status"
+                }
             }
         }
     },
@@ -87,6 +165,8 @@ const resources = {
             },
             sidebar: {
                 inventory: "Voorraadbeheer",
+                orders: "Orderbeheer",
+                reviews: "Klantbeoordelingen",
                 logout: "Uitloggen",
                 brand: "MR-TECH"
             },
@@ -134,6 +214,82 @@ const resources = {
                     added: "Nieuw product succesvol toegevoegd",
                     fetch_failed: "Laden van producten van backend mislukt",
                     save_failed: "Opslaan van product mislukt"
+                }
+            },
+            orders: {
+                title: "Orderbeheer",
+                subtitle: "Klantbestellingen volgen en bijwerken",
+                search_placeholder: "Order ID...",
+                filters: {
+                    status: "Status",
+                    customer_name: "Klantnaam",
+                    product_name: "Productnaam"
+                },
+                table: {
+                    id: "ORDER ID",
+                    customer: "KLANT",
+                    total: "TOTAALBEDRAG",
+                    status: "STATUS",
+                    date: "DATUM",
+                    operations: "OPERATIES",
+                    unknown_customer: "Onbekende klant"
+                },
+                modal: {
+                    update_status: "ORDERSTATUS BIJWERKEN",
+                    status: "ORDERSTATUS",
+                    cancel: "ANNULEREN",
+                    save: "STATUS BIJWERKEN",
+                    required: "Selecteer een status",
+                    edit_status: "Status bewerken"
+                },
+                status: {
+                    pending: "In afwachting",
+                    processing: "In verwerking",
+                    shipped: "Verzonden",
+                    delivered: "Geleverd",
+                    cancelled: "Geannuleerd"
+                },
+                messages: {
+                    fetch_failed: "Laden van orders mislukt",
+                    updated: "Orderstatus succesvol bijgewerkt",
+                    save_failed: "Bijwerken van orderstatus mislukt"
+                }
+            },
+            reviews: {
+                title: "Klantbeoordelingen",
+                subtitle: "Productbeoordelingen en feedback beheren",
+                search_placeholder: "Reactie inhoud...",
+                filters: {
+                    status: "Status",
+                    customer_name: "Klantnaam",
+                    product_name: "Productnaam"
+                },
+                table: {
+                    product: "PRODUCT",
+                    customer: "KLANT",
+                    rating: "BEOORDELING",
+                    comment: "REACTIE",
+                    status: "STATUS",
+                    date: "DATUM",
+                    operations: "OPERATIES",
+                    unknown_product: "Onbekend product"
+                },
+                modal: {
+                    update_status: "BEOORDELING MODEREREN",
+                    status: "STATUS INSTELLEN",
+                    cancel: "ANNULEREN",
+                    save: "WIJZIGINGEN OPSLAAN",
+                    required: "Selecteer een status"
+                },
+                status: {
+                    pending: "In afwachting",
+                    approved: "Goedgekeurd",
+                    rejected: "Afgewezen"
+                },
+                messages: {
+                    fetch_failed: "Laden van beoordelingen mislukt",
+                    updated: "Beoordelingsstatus succesvol bijgewerkt",
+                    save_failed: "Bijwerken van beoordelingsstatus mislukt"
                 }
             }
         }

@@ -84,7 +84,7 @@ const LoginPage = () => {
                                 src={logo}
                                 alt="MR-TECH"
                                 style={{
-                                    width: '120px',
+                                    width: '180px',
                                     objectFit: 'contain'
                                 }}
                             />

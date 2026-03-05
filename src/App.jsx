@@ -6,6 +6,8 @@ import ProtectedRoute from './components/ProtectedRoute';
 import DashboardLayout from './layouts/DashboardLayout';
 import LoginPage from './pages/Login/LoginPage';
 import ProductsPage from './pages/Products/ProductsPage';
+import OrdersPage from './pages/Orders/OrdersPage';
+import ReviewsPage from './pages/Reviews/ReviewsPage';
 
 // Ant Design Light Theme Configuration
 const lightTheme = {
@@ -51,6 +53,8 @@ function App() {
                 }
               >
                 <Route index element={<ProductsPage />} />
+                <Route path="orders" element={<OrdersPage />} />
+                <Route path="reviews" element={<ReviewsPage />} />
                 <Route path="*" element={<Navigate to="/" replace />} />
               </Route>
 
