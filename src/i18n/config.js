@@ -86,7 +86,9 @@ const resources = {
                     status: "STATUS",
                     date: "DATE",
                     operations: "OPERATIONS",
-                    unknown_customer: "Unknown Customer"
+                    unknown_customer: "Unknown Customer",
+                    items: "ITEMS",
+                    units: "Units"
                 },
                 modal: {
                     update_status: "UPDATE ORDER STATUS",
@@ -232,7 +234,9 @@ const resources = {
                     status: "STATUS",
                     date: "DATUM",
                     operations: "OPERATIES",
-                    unknown_customer: "Onbekende klant"
+                    unknown_customer: "Onbekende klant",
+                    items: "ITEMS",
+                    units: "Eenheden"
                 },
                 modal: {
                     update_status: "ORDERSTATUS BIJWERKEN",
